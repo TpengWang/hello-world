@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioinforLearner | 生信入门 Workshop</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif; margin: 0; color: #1f2937; background:#f8fafc; }
+    header { background: linear-gradient(135deg,#0f766e,#2563eb); color: white; padding: 48px 20px; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    .sub { opacity: .95; }
+    section { background:white; margin: 18px auto; padding: 20px; border-radius: 12px; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+    h2 { margin-top: 0; font-size:1.25rem; color:#0f172a; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:14px; }
+    .card { border:1px solid #e2e8f0; border-radius:10px; padding:14px; background:#fff; }
+    .card h3 { margin:0 0 6px; font-size:1rem; }
+    .meta { font-size:.86rem; color:#475569; }
+    .tag { display:inline-block; padding:2px 8px; border-radius:999px; font-size:.75rem; background:#e2e8f0; margin-right:6px; }
+    a { color:#1d4ed8; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    code { background:#eef2ff; padding:2px 6px; border-radius:6px; }
+    footer { text-align:center; font-size:.85rem; color:#64748b; padding:24px 12px 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>BioinforLearner</h1>
+      <p class="sub">面向初学者的生物信息学入门 Workshop 设计（GitHub + Figshare/Zenodo/Dryad 资源驱动）</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>1) Workshop 总体结构（建议 2 天）</h2>
+      <div class="grid">
+        <div class="card"><h3>模块 A：Linux / Git / Conda 基础</h3><p class="meta">目标：搭建可复现实验环境，学会版本管理。</p></div>
+        <div class="card"><h3>模块 B：Bulk RNA-seq 分析流程</h3><p class="meta">目标：从 FASTQ 到差异分析与可视化。</p></div>
+        <div class="card"><h3>模块 C：单细胞 RNA-seq 入门</h3><p class="meta">目标：QC、降维、聚类、注释。</p></div>
+        <div class="card"><h3>模块 D：功能注释与通路富集</h3><p class="meta">目标：GO / KEGG / GSEA 解读。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2) 优先参考的 GitHub 高星项目（教学主线）</h2>
+      <p class="meta">说明：优先选择社区广泛使用、星标高、文档完整的项目作为教学锚点（星标会动态变化）。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Bioconductor</h3>
+          <p><span class="tag">R/BioC</span><span class="tag">生态核心</span></p>
+          <p class="meta">用于讲解标准化生信包生态、表达矩阵处理与统计分析。</p>
+          <a href="https://github.com/Bioconductor/Bioconductor" target="_blank">GitHub</a>
+        </div>
+        <div class="card">
+          <h3>Snakemake</h3>
+          <p><span class="tag">Workflow</span><span class="tag">可复现</span></p>
+          <p class="meta">用于讲解流程编排、依赖管理与 HPC/云端扩展。</p>
+          <a href="https://github.com/snakemake/snakemake" target="_blank">GitHub</a>
+        </div>
+        <div class="card">
+          <h3>nf-core</h3>
+          <p><span class="tag">Best Practice</span><span class="tag">Pipeline</span></p>
+          <p class="meta">用于展示社区规范化 pipeline（如 rnaseq）。</p>
+          <a href="https://github.com/nf-core" target="_blank">GitHub</a>
+        </div>
+        <div class="card">
+          <h3>scverse / scanpy</h3>
+          <p><span class="tag">Single-cell</span><span class="tag">Python</span></p>
+          <p class="meta">单细胞分析核心工具链：AnnData + Scanpy。</p>
+          <a href="https://github.com/scverse/scanpy" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3) 数据资源模块（按引用率/影响力优先）</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Zenodo（方法/流程归档）</h3>
+          <p class="meta">适合沉淀 workflow 发布版本、教学数据快照和 DOI 引用。</p>
+          <a href="https://zenodo.org/" target="_blank">Zenodo</a>
+        </div>
+        <div class="card">
+          <h3>Figshare（补充数据与教学材料）</h3>
+          <p class="meta">适合课程手册、示例结果、附录数据共享与引用统计跟踪。</p>
+          <a href="https://figshare.com/" target="_blank">Figshare</a>
+        </div>
+        <div class="card">
+          <h3>Dryad（期刊关联数据）</h3>
+          <p class="meta">适合从已发表论文反向构建“复现型”教学任务。</p>
+          <a href="https://datadryad.org/" target="_blank">Dryad</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4) 教学安排（示例）</h2>
+      <ul>
+        <li><strong>Day 1 AM</strong>：环境安装、Linux/Git、数据下载与质控（FastQC/MultiQC）。</li>
+        <li><strong>Day 1 PM</strong>：Bulk RNA-seq（比对/定量 + DESeq2 差异分析）。</li>
+        <li><strong>Day 2 AM</strong>：scRNA-seq（Scanpy/Seurat 二选一）。</li>
+        <li><strong>Day 2 PM</strong>：富集分析、结果可视化、可复现报告（Rmarkdown/Jupyter）。</li>
+      </ul>
+      <p class="meta">建议学员最终提交：<code>workflow + notebook + 可视化报告 + data DOI 链接</code>。</p>
+    </section>
+
+    <section>
+      <h2>5) 项目落地文件建议</h2>
+      <div class="card">
+        <pre>
+BioinforLearner/
+├── index.html                # 课程首页
+├── modules/
+│   ├── 01_environment.md
+│   ├── 02_bulk_rnaseq.md
+│   ├── 03_scrnaseq.md
+│   └── 04_enrichment.md
+├── datasets/
+│   ├── curated_links.csv     # GitHub/Figshare/Zenodo/Dryad 数据索引
+│   └── README.md
+└── workflows/
+    ├── snakemake/
+    └── nf-core-notes/
+        </pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    BioinforLearner · 生信入门课程网页原型（可直接托管在 GitHub Pages）
+  </footer>
+</body>
+</html>
